@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "c35bfcff-534e-4f9b-b132-498c378f41fd",
+		"name": "Test API ENCORA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27338487"
+	},
+	"item": [
+		{
+			"name": "Add New Country",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country_code\": \"IND\",\n    \"country_name\": \"INDIA\",\n    \"dialing_code\": \"+91\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/countries"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/countries"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Countries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country_code\": \"IND\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/countries/filter"
+			},
+			"response": []
+		}
+	]
+}
